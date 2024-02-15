@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class SocialLink {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne
     private User user1;

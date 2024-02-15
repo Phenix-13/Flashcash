@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 public class Transfert {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne
     private User user_from;

@@ -19,7 +19,7 @@ public class User {
     private String email;
     @NotBlank
     private String password;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Account account;
     @ManyToMany
     private List<SocialLink> socialLinkList;

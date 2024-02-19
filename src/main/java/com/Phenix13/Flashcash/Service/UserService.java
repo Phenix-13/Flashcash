@@ -26,6 +26,7 @@ public class UserService {
         user.setLastName(form.getLastName());
         user.setEmail(form.getEmail());
         user.setPassword(passwordEncoder.encode(form.getPassword()));
-        return userRepository.save(user);
+        userRepository.save(user);
+        return user;
     }
 }

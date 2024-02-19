@@ -17,7 +17,7 @@ public class UserController {
     public UserController(UserService userService) {this.userService = userService;}
 
     @GetMapping("/")
-    public ModelAndView home(Model model){return new ModelAndView("userProfile");}
+    public ModelAndView home(Model model){return new ModelAndView("/User/userProfile");}
 
     @PostMapping("/signUp")
     public ModelAndView processRequest(@ModelAttribute("signUpForm")SignUpForm form){
@@ -28,5 +28,10 @@ public class UserController {
     @GetMapping("/signUp")
     public ModelAndView showRegisterForm(){
         return new ModelAndView("signUp","signUpForm",new SignUpForm());
+    }
+
+    @GetMapping("/User/userProfile")
+    public String logoff(Model model){
+        return "User/userProfile";
     }
 }

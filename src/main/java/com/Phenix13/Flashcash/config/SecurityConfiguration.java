@@ -18,11 +18,11 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/style.css","/img/**","/login").permitAll()
+                        .requestMatchers("/signUpStyle.css","/signInStyle.css","/signUp","/signIn").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin((from) -> from
-                        .loginPage("/login")
+                        .loginPage("/signIn")
                         .permitAll().usernameParameter("email").defaultSuccessUrl("/",true)
                 )
                 .logout((logout) -> logout.permitAll());

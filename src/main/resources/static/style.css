@@ -1,0 +1,225 @@
+.signinpage {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+.signinpage .main {
+  width: 350px;
+  height: 550px;
+  overflow: hidden;
+  background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/cover;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+}
+.signinpage .main #chk {
+  display: none;
+}
+.signinpage .main #chk:checked .signin {
+  transform: translateY(-525px);
+}
+.signinpage .main #chk:checked .signin a {
+  transform: scale(1);
+}
+.signinpage .main #chk:checked .signup a {
+  transform: scale(0.6);
+}
+.signinpage .main a {
+  color: #fff;
+  font-size: 2.3em;
+  justify-content: center;
+  display: flex;
+  margin: 60px;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+}
+.signinpage .main button {
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.signinpage .main button:hover {
+  background-color: #6d44b8;
+}
+.signinpage .main .signup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.signinpage .main .signup a {
+  cursor: pointer;
+  text-decoration: none;
+  transform: scale(0.6);
+}
+.signinpage .main .signin {
+  height: 460px;
+  background: #eee;
+  border-radius: 60%/10%;
+  transform: translateY(-545px);
+  transition: 0.8s ease-in-out;
+}
+.signinpage .main .signin a {
+  color: #573b8a;
+}
+.signinpage .main .signin input {
+  width: 60%;
+  height: 20px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.signuppage {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+.signuppage .main {
+  width: 350px;
+  height: 550px;
+  overflow: hidden;
+  background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/cover;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+}
+.signuppage .main #chk {
+  display: none;
+}
+.signuppage .main a {
+  color: #fff;
+  font-size: 2.3em;
+  justify-content: center;
+  display: flex;
+  margin: 60px;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+}
+.signuppage .main button {
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.signuppage .main button:hover {
+  background: #6d44b8;
+}
+.signuppage .main .signup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.signuppage .main .signup input {
+  width: 60%;
+  height: 20px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.signuppage .main .signin {
+  height: 460px;
+  background: #eee;
+  border-radius: 60%/10%;
+  transform: translateY(-180px);
+}
+.signuppage .main .signin a {
+  color: #573b8a;
+  transform: scale(0.6);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*===================================== header all pages =======================================*/
+header {
+  margin: 0;
+  height: 80px;
+  font-size: 0;
+  font-family: Helvetica, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e)
+}
+header * {
+  box-sizing: border-box;
+}
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 20px 30px 20px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-out;
+  /*backdrop-filter: blur(8px) brightness(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);*/
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+}
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+header a:hover, header a:focus {
+  text-decoration: underline;
+}
+header .list {
+  list-style-type: none;
+  margin-left: auto;
+  display: none;
+}
+@media (min-width: 640px) {
+  header .list {
+    display: flex;
+  }
+}
+header .list li {
+  margin-left: 20px;
+}/*# sourceMappingURL=style.css.map */
+
+/*======================================== User Profile ========================================*/
+.userprofile{
+    margin: 0;
+    font-family: Helvetica, Verdana, sans-serif;
+}
+

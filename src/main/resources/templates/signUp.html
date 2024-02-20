@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Slide Navbar</title>
-    <link rel="stylesheet" type="text/css" href="signUpStyle.css">
-    <link rel="stylesheet" type="text/css" href="../static/signUpStyle.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="signuppage">
 <div class="main">
     <input type="checkbox" id="chk" aria-hidden="true">
 
@@ -30,7 +30,7 @@
         </form>
     </div>
 
-    <div class="login">
+    <div class="signin">
         <form th:action="@{/signIn}" method="post" class="form-horizontal">
             <a href="/signIn" type="text/html" for="chk" aria-hidden="true">Login</a>
         </form>

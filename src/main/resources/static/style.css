@@ -190,8 +190,6 @@ header nav {
   display: flex;
   align-items: center;
   transition: 0.3s ease-out;
-  /*backdrop-filter: blur(8px) brightness(1.2);
-  -webkit-backdrop-filter: blur(8px) brightness(1.2);*/
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   color: white;
   font-size: 16px;
@@ -222,4 +220,74 @@ header .list li {
     margin: 0;
     font-family: Helvetica, Verdana, sans-serif;
 }
+.userprofile main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+.userprofile main h1{
+    font-size:4em;
+    font-weight:100;
+}
+.services{
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+.services div{
+    margin: 0 1em;
+    width:25%;
+    border:lightgray 1px solid;
+    border-radius:10px;
+    box-shadow: 0px 1px 2px 1px lightgray;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+
+}
+.services div h2{
+    color:white;
+    background-color:#0D6EFD;
+    padding:15px 1em;
+    margin:0;
+    text-align:center;
+}
+.services div ul{
+    padding:2em 0;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    list-style-type:none;
+}
+.services div ul li{
+    margin:2.5px;
+}
+.services div button{
+    background-color: white;
+    color: #0D6EFD;
+    border: 2px solid #0D6EFD;
+    border-radius:10px;
+    padding:10px 20px;
+    margin:3%
+
+}
+.services div button:hover{
+    background-color: #0D6EFD;
+    color: white;
+}
+.services div button a{
+    color: #0D6EFD;
+    text-decoration:none;
+    font-size:120%;
+}
+.services div button:hover a{
+    color: white;
+}
+
+
+
 

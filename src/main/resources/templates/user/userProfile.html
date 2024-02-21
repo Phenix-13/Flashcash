@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" type="text/css" href="../../static/style.css">
     <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
 </head>
@@ -62,6 +63,43 @@
                 </button>
             </div>
         </section>
+
+        <section class="balance">
+            <h2>My account balance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="user : ${users}">
+                        <td th:text="${user.email}">mail.mail@mail.mail</td>
+                        <td th:text="${user.account.amount}">42066.69€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
+
+    <footer>
+        <ul></ul>
+        <ul>
+            Cash transfer
+            <li>FAQ</li>
+            <li>Why using Flash Cash ?</li>
+        </ul>
+        <ul>
+            Need help ?
+            <li>Live chat</li>
+            <li>Contact us</li>
+        </ul>
+        <ul>
+            About
+            <li>Team</li>
+            <li>Locations</li>
+        </ul>
+    </footer>
 </body>
 </html>

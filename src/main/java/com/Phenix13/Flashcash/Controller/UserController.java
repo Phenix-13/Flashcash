@@ -24,9 +24,8 @@ public class UserController {
     }
 
     @GetMapping("/")
-    public ModelAndView home(Model model){
-        model.addAttribute("users",customService.sessionUser());
-        return new ModelAndView("/user/userProfile");
+    public String home(Model model){
+        return "redirect:/user/userProfile";
     }
 
     @GetMapping("/user/userProfile")

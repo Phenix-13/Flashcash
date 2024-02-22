@@ -44,4 +44,5 @@ public class UserController {
     public ModelAndView showRegisterForm(){
         return new ModelAndView("signUp","signUpForm",new SignUpForm());
     }
+
 }

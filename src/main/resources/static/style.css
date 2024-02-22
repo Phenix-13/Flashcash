@@ -338,3 +338,21 @@ footer ul li{
     font-size:15px;
     margin:5px 0;
 }
+/*===================================== User Iban ===========================================*/
+
+.useriban{
+    margin: 0;
+    font-family: Helvetica, Verdana, sans-serif;
+    background-color:whitesmoke;
+}
+.useriban main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding-top:80px;
+
+}
+
+
+

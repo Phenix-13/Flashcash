@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/style.css">
+    <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
+</head>
+<body class="useriban">
+    <header>
+        <nav>
+            <a href="#">LOGO</a>
+            <ul class="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Transfers</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Sign out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="addiban">
+            <form th:action="@{/addIban}" th:object="${addIbanForm}" method="post" style="width: 100%">
+
+                <a>Sign up</a>
+                <input type="text" th:field="*{iban1}" id="iban1" placeholder="Iban" required="">
+
+                <button type="submit">Add Iban</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <ul></ul>
+        <ul>
+            Cash transfer
+            <li>FAQ</li>
+            <li>Why using Flash Cash ?</li>
+        </ul>
+        <ul>
+            Need help ?
+            <li>Live chat</li>
+            <li>Contact us</li>
+        </ul>
+        <ul>
+            About
+            <li>Team</li>
+            <li>Locations</li>
+        </ul>
+    </footer>
+</body>
+</html>

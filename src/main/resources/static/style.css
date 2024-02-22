@@ -555,9 +555,17 @@ footer ul li{
 .proceed-btn a {
     color: #fff;
 }
+.cash{
+    display:flex;
+    width:100%;
+    justify-content:center;
+}
+.cash p{
+    margin:6px 5px;
+}
 .cash input{
-    margin-left:5%;
     width:80%;
+    height:30px;
     margin-bottom:20px;
     padding-left: 20px;
     border: 2px solid #e1e8ee;

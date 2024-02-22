@@ -235,6 +235,14 @@ header .list li {
     font-size:4em;
     font-weight:100;
 }
+.userprofile main section div button{
+    display:flex;
+}
+.userprofile main section div button a{
+    width:100%;
+    height:100%;
+    padding:10px 20px;
+}
 .services{
     display:flex;
     flex-wrap:wrap;
@@ -276,7 +284,7 @@ header .list li {
     color: #0D6EFD;
     border: 2px solid #2F2B61;
     border-radius:10px;
-    padding:10px 20px;
+
     margin:0 3% 3% 3%;
 
 }
@@ -344,15 +352,66 @@ footer ul li{
     margin: 0;
     font-family: Helvetica, Verdana, sans-serif;
     background-color:whitesmoke;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
 }
 .useriban main{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     justify-content:center;
     align-items:center;
-    padding-top:80px;
+    padding-top:15%;
+    width:90%;
+}
+.useriban .addiban{
+    width:80%;
+}
+.useriban .addiban form{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    width:100%;
 
 }
 
 
-
+.useriban .addiban form a{
+    width:100%;
+    text-align:center;
+    padding:1em;
+    font-size:2em;
+    font-weight:700;
+}
+.useriban .addiban form input{
+    width:75%;
+    margin:0;
+    padding:1em;
+    border:1px solid #2E2A5D;
+    color:#2E2A5D;
+    border-radius:20px 0 0 20px;
+}
+.useriban .addiban form button{
+    width:20%;
+    margin:0;
+    padding:0;
+    border:1px solid #2E2A5D;
+    color:#2E2A5D;
+    border-radius:0 20px 20px 0;
+    font-size:1em;
+}
+.useriban .addiban form button:hover{
+    color:white;
+    background-color:#2E2A5D;
+}
+.userprofile main .iban h2{
+    text-align:center;
+    padding:10px 30px;
+}
+.userprofile main .iban p{
+    text-align:center;
+    padding:10px 100px;
+    border:1px solid black;
+    border-radius: 10px;
+}

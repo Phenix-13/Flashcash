@@ -17,7 +17,7 @@
                 <li><a href="#">Transfers</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Sign out</a></li>
+                <li><a href="/logout">Sign out</a></li>
             </ul>
         </nav>
     </header>
@@ -74,12 +74,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="user : ${users}">
-                        <td th:text="${user.email}">mail.mail@mail.mail</td>
-                        <td th:text="${user.account.amount}">42066.69€</td>
+                    <tr th:object="${user}">
+                        <td th:text="*{email}"></td>
+                        <td th:text="*{account.amount}"></td>
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <section class="iban">
+            <h2>Your IBAN</h2>
+            <p th:text="${user.account.iban1}"></p>
         </section>
     </main>
 

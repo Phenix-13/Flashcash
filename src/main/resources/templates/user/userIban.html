@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html><!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -26,7 +17,7 @@
                 <li><a href="#">Transfers</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Sign out</a></li>
+                <li><a href="/logout">Sign out</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +26,7 @@
         <div class="addiban">
             <form th:action="@{/addIban}" th:object="${addIbanForm}" method="post" style="width: 100%">
 
-                <a>Sign up</a>
+                <a>Add your IBAN</a>
                 <input type="text" th:field="*{iban1}" id="iban1" placeholder="Iban" required="">
 
                 <button type="submit">Add Iban</button>
@@ -43,7 +34,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer style="position:fixed;bottom:0">
         <ul></ul>
         <ul>
             Cash transfer

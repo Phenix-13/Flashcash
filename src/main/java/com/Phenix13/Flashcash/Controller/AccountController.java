@@ -24,9 +24,11 @@ public class AccountController {
         model.addAttribute("addIbanForm",customService.sessionUser().getAccount());
         return new ModelAndView("/user/userIban");
     }
+
+
     @PostMapping("/addIban")
-    public ModelAndView addIban(@ModelAttribute("addIbanForm") AddIbanForm iban){
+    public String addIban(@ModelAttribute("addIbanForm") AddIbanForm iban){
         accountService.modifyIban(iban);
-        return new ModelAndView("/user/userProfile");
+        return "redirect:/user/userProfile";
     }
 }

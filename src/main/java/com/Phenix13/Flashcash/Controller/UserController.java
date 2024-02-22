@@ -30,7 +30,7 @@ public class UserController {
 
     @GetMapping("/user/userProfile")
     public ModelAndView userProfile(Model model){
-        model.addAttribute("users",customService.sessionUser());
+        model.addAttribute("user",customService.sessionUser());
         return new ModelAndView("/user/userProfile");
     }
 

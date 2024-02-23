@@ -2,7 +2,10 @@ package com.Phenix13.Flashcash.Controller;
 
 import com.Phenix13.Flashcash.Service.AccountService;
 import com.Phenix13.Flashcash.Service.CustomService;
+import com.Phenix13.Flashcash.Service.form.AddCashForm;
 import com.Phenix13.Flashcash.Service.form.AddIbanForm;
+import com.Phenix13.Flashcash.Service.form.SignUpForm;
+import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +32,17 @@ public class AccountController {
     @PostMapping("/addIban")
     public String addIban(@ModelAttribute("addIbanForm") AddIbanForm iban){
         accountService.modifyIban(iban);
+        return "redirect:/user/userProfile";
+    }
+
+    @GetMapping("/addCashForm")
+    public ModelAndView addCashForm(Model model){
+        return new ModelAndView("/account/addCashForm","addCashForm",new AddCashForm());
+    }
+
+    @PostMapping("/addCash")
+    public String addCash(@ModelAttribute("addCashForm") AddCashForm addCashForm){
+        accountService.addCash(addCashForm);
         return "redirect:/user/userProfile";
     }
 }

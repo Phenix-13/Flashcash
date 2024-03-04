@@ -26,6 +26,8 @@ public class Account {
     public Account() {
     }
 
+
+
     public Account(int id, double amount, String iban1, String iban2, String iban3, String iban4, String iban5) {
         this.id = id;
         this.amount = amount;
@@ -35,6 +37,7 @@ public class Account {
         this.iban4 = iban4;
         this.iban5 = iban5;
     }
+
 
     public int getId() {
         return id;

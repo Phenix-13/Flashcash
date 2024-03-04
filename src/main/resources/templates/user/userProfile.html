@@ -46,7 +46,7 @@
                     <li>Fully secured</li>
                 </ul>
                 <button>
-                    <a href="#">Start</a>
+                    <a th:href="@{/withdrawCashForm}">Start</a>
                 </button>
             </div>
 
@@ -75,14 +75,15 @@
                 </thead>
                 <tbody>
                     <tr th:object="${user}">
-                        <td th:text="*{email}"></td>
-                        <td th:text="*{account.amount}"></td>€
+                        <td th:text="*{email}">test@test</td>
+                        <td th:text="*{account.amount}+' € ' ">100</td>
                     </tr>
                 </tbody>
             </table>
         </section>
+
         <section class="iban">
-            <h2>Your IBAN</h2>
+            <h2 >Your IBAN</h2>
             <p th:text="${user.account.iban1}"></p>
         </section>
     </main>

@@ -306,6 +306,7 @@ header .list li {
     flex-direction:column;
     align-items:center;
 }
+
 .balance h2{
     font-size:2em;
     font-weight:10;
@@ -572,4 +573,56 @@ footer ul li{
     border-radius: 6px;
     background: #fff;
     color: #86939e;
+}
+
+/*========================================= withdraw Cash ==========================================*/
+
+.withdrawCashForm{
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    height: 100;
+}
+
+.withdrawCashForm main{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    padding-top:200px;
+    min-height: 100%;
+}
+
+.withdrawCashForm main form{
+    width:250px;
+    height:100px;
+    padding:2em;
+    border:2px solid #5e6977;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    background-color: rgba(94,105,119,1);
+}
+
+.withdrawCashForm main form h2{
+    font-size:20px;
+    margin:0;
+    padding:0;
+}
+
+.withdrawCashForm main form input{
+    margin:20px 0;
+    width:100%;
+
+}
+.withdrawCashForm main form input[type=number] {
+    -webkit-appearance: textfield;
+}
+
+.withdrawCashForm main form button{
+    width:25%;
+}
+.withdrawCashForm footer{
+     position:fixed;
+     bottom:0;
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/style.css">
+    <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+</head>
+<body class="withdrawCashForm">
+<header>
+    <nav>
+        <a href="#">LOGO</a>
+        <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Transfers</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="/logout">Sign out</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <form th:action="@{/withdrawCash}" th:object="${withdrawCashForm}" method="post">
+        <div class="">
+            <h2 for="amount">Montant</h2>
+            <input type="number" th:field="*{amount}" id="amount" min="0" th:max="*{amount}">
+        </div>
+        <button type="submit">summit</button>
+    </form>
+</main>
+
+<footer>
+    <ul></ul>
+    <ul>
+        Cash transfer
+        <li>FAQ</li>
+        <li>Why using Flash Cash ?</li>
+    </ul>
+    <ul>
+        Need help ?
+        <li>Live chat</li>
+        <li>Contact us</li>
+    </ul>
+    <ul>
+        About
+        <li>Team</li>
+        <li>Locations</li>
+    </ul>
+</footer>
+</body>
+</html>

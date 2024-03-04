@@ -33,4 +33,10 @@ public class AccountService {
         curAccount.setAmount(newcash);
         accountRepository.save(curAccount);
     }
+
+    public void withdrawCash(Account withdrawCashForm){
+        Account curAccount = customService.sessionUser().getAccount();
+        curAccount.setAmount(curAccount.getAmount() - withdrawCashForm.getAmount());
+        accountRepository.save(curAccount);
+    }
 }

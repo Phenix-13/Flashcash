@@ -36,7 +36,7 @@ public class SocialLinkController {
     @PostMapping("/socialLinkForm")
     public String addFriend(@ModelAttribute("socialLinkForm") User newfriend){
         socialLinkService.addFriend(newfriend);
-        return "redirect:/socialLinkForm";
+        return "redirect:/socialLinkListForm";
     }
 
     @GetMapping("/socialLinkListForm")

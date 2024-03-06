@@ -13,11 +13,11 @@
         <nav>
             <a href="#">LOGO</a>
             <ul class="list">
-                <li><a href="#">Home</a></li>
+
                 <li><a href="#">Transfers</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a th:href="@{/user/userProfile}">Profile</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="/logout">Sign out</a></li>
+                <li><a th:href="@{/logout}">Sign out</a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +33,7 @@
                     <li>Fully secured</li>
                 </ul>
                 <button>
-                    <a href="/addCashForm">Start</a>
+                    <a th:href="@{/addCashForm}">Start</a>
                 </button>
             </div>
 
@@ -59,7 +59,7 @@
                     <li>Fully secured</li>
                 </ul>
                 <button>
-                    <a href="/addIban">Start</a>
+                    <a th:href="@{/addIban}">Start</a>
                 </button>
             </div>
         </section>
@@ -76,7 +76,7 @@
                 <tbody>
                     <tr th:object="${user}">
                         <td th:text="*{email}">test@test</td>
-                        <td th:text="*{account.amount}+' € ' ">100</td>
+                        <td th:text="*{account.amount}+' € ' "></td>
                     </tr>
                 </tbody>
             </table>

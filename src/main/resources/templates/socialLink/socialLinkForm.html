@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 </head>
-<body class="withdrawCashForm">
+<body class="socialLinkForm">
 <header>
     <nav>
         <a href="#">LOGO</a>
@@ -23,12 +23,12 @@
 </header>
 
 <main>
-    <form th:action="@{/withdrawCash}" th:object="${withdrawCashForm}" method="post">
+    <form th:action="@{/socialLinkForm}" th:object="${socialLinkForm}" method="post">
         <div class="">
-            <h2 for="amount">Montant</h2>
-            <input type="number" th:field="*{amount}" id="amount" min="0" th:max="*{amount}">
+            <h2 for="email">Friend's Email</h2>
+            <input type="email" th:field="*{email}" id="email">
         </div>
-        <button type="submit">summit</button>
+        <button type="submit">Add friend</button>
     </form>
 </main>
 

@@ -15,11 +15,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class UserController {
     private final UserService userService;
-    private final UserRepository userRepository;
     private final CustomService customService;
-    public UserController(UserService userService, UserRepository userRepository, CustomService customService) {
+    public UserController(UserService userService, CustomService customService) {
         this.userService = userService;
-        this.userRepository = userRepository;
         this.customService = customService;
     }
 

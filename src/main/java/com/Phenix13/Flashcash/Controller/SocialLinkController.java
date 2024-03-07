@@ -45,7 +45,7 @@ public class SocialLinkController {
         return new ModelAndView("/socialLink/socialLinkListForm");
     }
 
-    @GetMapping("/user/delete/{id}")
+    @GetMapping("/socialLinkListForm/delete/{id}")
     public String deleteUser(@PathVariable("id") String id, Model model) {
         User user = userRepository.findUserByemail(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
         socialLinkRepository.delete(socialLinkRepository.findSocialLinkByUser1EmailAndUser2Email(customService.sessionUser().getEmail(),id));

@@ -30,7 +30,6 @@ public class SocialLinkService {
         newlink.setUser1(me);
         newlink.setUser2(friend);
         socialLinkRepository.save(newlink);
-
     }
 
     public List<String> getAllFriend(){

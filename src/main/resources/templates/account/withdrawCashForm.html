@@ -25,7 +25,7 @@
     <form th:action="@{/withdrawCash}" th:object="${withdrawCashForm}" method="post">
         <div class="">
             <h2 for="amount">Montant</h2>
-            <input type="number" th:field="*{amount}" id="amount" min="0" th:max="*{amount}">
+            <input step="any" type="number" th:field="*{amount}" id="amount" min="0" th:max="*{amount}">
         </div>
         <button type="submit">summit</button>
     </form>

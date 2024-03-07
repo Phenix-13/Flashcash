@@ -803,3 +803,66 @@ footer ul li{
 .thmail{
     width:50%;
 }
+/*===================================== transfer =======================================*/
+
+.transferForm{
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    height: 100;
+}
+
+.transferForm main{
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    align-items:center;
+    padding-top:150px;
+}
+
+.transferForm footer{
+     position:fixed;
+     bottom:0;
+}
+
+.transferForm form{
+    border: 1px solid black;
+    border-radius:10px;
+    background:linear-gradient(355deg, rgba(100,100,100,1) 0%, rgba(200,200,200,1) 75%);
+    padding:2em;
+    width:20%;
+    display:flex;
+    flex-direction:column;
+}
+.transferForm form h2{
+    font-size:120%;
+    margin:0;
+    padding:10px 0;
+}
+.user_from{
+    display:flex;
+    flex-direction:column;
+}
+.user_from input{
+    border:none;
+}
+.user_to{
+    display:flex;
+    flex-direction:column;
+}
+.user_to input{
+    border:none;
+}
+.amount_before_fee{
+    display:flex;
+    flex-direction:column;
+}
+.amount_before_fee input[type=number] {
+    -webkit-appearance: textfield;
+}
+.transferForm form button{
+    width:27%;
+    margin:1em 0;
+    padding:5px 10px;
+}

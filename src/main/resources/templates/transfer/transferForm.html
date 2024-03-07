@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 </head>
-<body class="transfertForm">
+<body class="transferForm">
 <header>
     <nav>
         <a href="#">LOGO</a>
@@ -22,18 +22,18 @@
 </header>
 
 <main>
-    <form th:action="@{/transfertForm}" th:object="${transfert}" method="post">
+    <form th:action="@{/transferForm}" th:object="${transfer}" method="post">
         <div class="user_from">
-            <h2 for="user_from">From</h2>
-            <input type="email" th:field="*{user_from.email}" id="user_from">
+            <h2>From</h2>
+            <input type="email" th:field="*{user_from.email}" id="user_from" readonly>
         </div>
         <div class="user_to">
-            <h2 for="user_to">To</h2>
-            <input type="email" th:field="*{user_to.email}" id="user_to">
+            <h2>To</h2>
+            <input type="email" th:field="*{user_to.email}" id="user_to" readonly>
         </div>
         <div class="amount_before_fee">
-            <h2 for="amount_before_fee">Amount</h2>
-            <input type="email" th:field="*{amount_before_fee}" id="amount_before_fee">
+            <h2>Amount</h2>
+            <input step="any" type="number" th:field="*{amount_before_fee}" min="0" th:max="*{user_from.account.amount}" id="amount_before_fee">
         </div>
         <button type="submit">Send</button>
     </form>

@@ -74,8 +74,7 @@
             </div>
 
             <div class="cash">
-                <input  oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"
-                       th:field="*{cash}" id="cash" placeholder="Montant" required="">
+                <input step="any" min="0" type="number" th:field="*{cash}" id="cash" placeholder="Montant">
                 <p>€</p>
             </div>
             <!-- Buttons -->

@@ -28,24 +28,28 @@
         </button>
     </div>
     <div class="friendList">
+
+
         <table class="table table-bordered">
             <thead>
-            <tr>
-                <th class="thmail">Email</th>
-                <th class="thaction">Action</th>
-            </tr>
+                <tr>
+                    <th class="thmail">Email</th>
+                    <th class="thaction">Action</th>
+                </tr>
             </thead>
             <tbody>
-            <tr th:each="mail : ${linkList}">
-                <td style="width: 25%" th:text="${mail}"></td>
-                <td style="width: 15%" class="text-center">
-                    <button class="cssbuttons-io" ><a style="padding:2px 4px;" th:href="@{/socialLinkListForm/transfert/{id}(id=${mail})}">Transfer</a></button>
-                    <button class="cssbuttons-io" ><a style="padding:2px 4px;" th:href="@{/socialLinkListForm/delete/{id}(id=${mail})}">Delete</a></button>
-
-                </td>
-            </tr>
+                <tr th:each="mail : ${linkList}">
+                    <td style="width: 25%" th:text="${mail}"></td>
+                    <td style="width: 15%" class="text-center">
+                        <button class="cssbuttons-io" ><a style="padding:2px 4px;" th:href="@{/transfer/{id}(id=${mail})}">Transfer</a></button>
+                        <button class="cssbuttons-io" ><a style="padding:2px 4px;" th:href="@{/socialLinkListForm/delete/{id}(id=${mail})}">Delete</a></button>
+                    </td>
+                </tr>
             </tbody>
         </table>
+
+
+
     </div>
 </main>
 

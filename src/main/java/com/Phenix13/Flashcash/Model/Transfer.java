@@ -2,12 +2,11 @@ package com.Phenix13.Flashcash.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.Date;
 
 @Entity
 @Data
-public class Transfert {
+public class Transfer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -19,10 +18,10 @@ public class Transfert {
     private double amount_after_fee;
     private Date dateTime;
 
-    public Transfert() {
+    public Transfer() {
     }
 
-    public Transfert(int id, User user_from, User user_to, double amount_before_fee, double amount_after_fee, Date dateTime) {
+    public Transfer(int id, User user_from, User user_to, double amount_before_fee, double amount_after_fee, Date dateTime) {
         this.id = id;
         this.user_from = user_from;
         this.user_to = user_to;

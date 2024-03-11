@@ -7,9 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" type="text/css" href="../../static/style.css">
     <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 </head>
-<body class="withdrawCashForm">
+<body class="userprofile">
 <header>
     <nav>
         <a href="#">LOGO</a>
@@ -22,14 +21,26 @@
     </nav>
 </header>
 
-<main>
-    <form th:action="@{/withdrawCash}" th:object="${withdrawCashForm}" method="post">
-        <div class="">
-            <h2 for="amount">Montant</h2>
-            <input step="any" type="number" th:field="*{amount}" id="amount" min="0" th:max="*{amount}">
-        </div>
-        <button type="submit">summit</button>
-    </form>
+<main class="contactForm">
+    <div class="container">
+        <h1>Formulaire de contact</h1>
+        <form th:action="@{/contactForm}" th:object="${contactForm}" method="post">
+            <label for="fname">Nom & prénom</label>
+            <input type="text" id="fname" th:field="*{name}" placeholder="Votre nom et prénom" required>
+
+            <label for="sujet">Sujet</label>
+            <input type="text" id="sujet" th:field="*{subject}" placeholder="L'objet de votre message" required>
+
+            <label for="emailAddress">Email</label>
+            <input id="emailAddress" type="email" th:field="*{email}" placeholder="Votre email" required>
+
+
+            <label for="subject">Message</label>
+            <textarea id="subject" th:field="*{message}" placeholder="Votre message" style="height:200px" required></textarea>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
 </main>
 
 <footer>
